@@ -19,7 +19,7 @@
 						'adresse' => $_POST["adresse"],
 						'mot_de_passe' => $_POST["mdp"],
 						'ville' =>  $_POST["vil"],
-						'code_postal' => $_POST["cp"]),
+						'code_postal' => $_POST["cp"],
  						'date_de_naissance' => $_POST["ddn"]));
 
  	if ($req2 == false) {
