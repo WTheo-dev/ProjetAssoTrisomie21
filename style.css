@@ -19,14 +19,11 @@ form h1{
   text-align:center;
 }
 
-form p.choose-email{
-  text-align:center;
-}
 form .inputs {
   display: flex;
   flex-direction: column;
 }
-form .inputs input[type='email'], input[type='password'], input[type='{
+form .inputs input[type='email'], input[type='password'] {
   padding: 15px;
   border:none;
   border-radius: 5px;
@@ -34,14 +31,7 @@ form .inputs input[type='email'], input[type='password'], input[type='{
   outline:none;
   margin-bottom: 15px;
 }
-form p.inscription{
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #878787;
-}
-form p.inscription span{
-  color: #1e06fa;
-}
+
 form button{
   padding: 15px 25px;
   border-radius: 5px;

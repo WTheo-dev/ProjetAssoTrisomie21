@@ -18,10 +18,6 @@ form h1{
   color: #1e06fa;
   text-align:center;
 }
-
-form p.choose-email{
-  text-align:center;
-}
 form .Groupe {
   display: flex;
   flex-direction: column;
@@ -34,14 +30,7 @@ form .Groupe input[type='nom'], input[type='prenom'], input[type='email'], input
   outline:none;
   margin-bottom: 15px;
 }
-form p.inscription{
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #878787;
-}
-form p.inscription span{
-  color: #1e06fa;
-}
+
 form button{
   padding: 15px 25px;
   border-radius: 5px;
