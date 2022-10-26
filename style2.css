@@ -22,7 +22,7 @@ form .Groupe {
   display: flex;
   flex-direction: column;
 }
-form .Groupe input[type='nom'], input[type='prenom'], input[type='email'], input[type='password'], input[type='date'], input[type='Ville'], input[type='text']{
+form .Groupe>input{
   padding: 15px;
   border:none;
   border-radius: 5px;
