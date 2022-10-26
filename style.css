@@ -17,13 +17,15 @@ form {
 form h1{
   color: #1e06fa;
   text-align:center;
+  font-size : 1.5em;
+
 }
 
 form .inputs {
   display: flex;
   flex-direction: column;
 }
-form .inputs input[type='email'], input[type='password'] {
+form .inputs>input {
   padding: 15px;
   border:none;
   border-radius: 5px;
