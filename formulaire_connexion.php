@@ -14,14 +14,14 @@
 	}
 
 	$req2 = $req->execute(array('email' => $_POST["courriel"],
-								'mdp' => $_POST["mdp"]));
+					'mdp' => $_POST["mdp"]));
 
 	//rowCount()
  	if ($req->rowCount() > 0) {
- 		echo "WELCOME";
+ 		echo "Bienvenu sur la page d'accueil !";
  	}
  	else {
- 		echo "ERROR";
+ 		echo "Je ne vous connais pas, désolé.";
  	}
 
 	if ($req2 == false) {
