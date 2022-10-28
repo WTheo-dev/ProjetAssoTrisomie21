@@ -44,3 +44,9 @@ form button{
   outline:none;
   cursor:pointer;
 }
+form button:hover{
+  transform: scale (1.1);
+  transition: .3s;
+  cursor: pointer;
+  background-color: #13068a;
+}
