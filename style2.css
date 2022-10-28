@@ -17,6 +17,7 @@ form {
 form h1{
   color: #1e06fa;
   text-align:center;
+  font-size : 1.5em;
 }
 form .Groupe {
   display: flex;
@@ -32,6 +33,7 @@ form .Groupe>input{
 }
 
 form button{
+  margin: 1em;
   padding: 0.938em 2.5em;
   border-radius: 0.313em;
   border:none;
