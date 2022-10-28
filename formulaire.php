@@ -1,5 +1,4 @@
 <?php
-	//Test
 	try {
  		$linkpdo = new PDO("mysql:host=localhost;dbname=testsae", 'root', '');
  	}
@@ -24,10 +23,12 @@
 
 	// SI IL TROUVE DES COMPTE AVEC MEME MOT DE PASSE OU LOGIN :
  	if ($req->rowCount() > 0) {
- 		echo "Problème rowCount !";
+ 		echo "J'AI TROUVE DES COMPTES AVEC MEME MOT DE PASSE OU LOGIN !";
+		echo $req->rowCount();
  	}
  	else {
-	 	$req = $linkpdo->prepare('INSERT INTO membre VALUES ("", :nom, :prenom, :adresse, :code_postal, :ville, :courriel, :date_de_naissance, :mot_de_passe)');
+	 	$req = $linkpdo->prepare('INSERT INTO membre (Nom, Prénom, Adresse, Code_Postal, Ville, Courriel, Date_Naissance, Mdp) VALUES (:nom, :prenom, :adresse, :code_postal, :ville, :courriel, 
+		:date_de_naissance, :mot_de_passe)');
 
 	 	if ($req == false) {
 	 		die ('Error preparation');
