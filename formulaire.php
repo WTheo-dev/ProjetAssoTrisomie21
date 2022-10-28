@@ -1,4 +1,5 @@
 <?php
+	//Test
 	try {
  		$linkpdo = new PDO("mysql:host=localhost;dbname=testsae", 'root', '');
  	}
