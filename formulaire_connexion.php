@@ -1,6 +1,6 @@
 <?php
 	try {
-	 	$linkpdo = new PDO("mysql:host=localhost;dbname=testsae", 'root', '');
+	 	$linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
 	}
 	catch (Exception $e) {
 	 	die('Error : ' . $e->getMessage());

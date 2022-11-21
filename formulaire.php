@@ -42,4 +42,6 @@
 	 	$req->DebugDumpParams();
 	 	die ('Error execute 2');
 	}
+	header('Location:http://localhost:800/sae/ProjetAssoTrisomie21/formulaire_connexion.html');
+
 ?>
