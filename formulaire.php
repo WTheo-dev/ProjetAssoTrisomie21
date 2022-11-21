@@ -23,7 +23,7 @@
 
 	// SI IL TROUVE DES COMPTE AVEC MEME MOT DE PASSE OU LOGIN :
 
-	$req = $linkpdo->prepare('INSERT INTO membre VALUES ("", :nom, :prenom, :adresse, :code_postal, :ville, :courriel, :date_de_naissance, :mot_de_passe, NULL, NULL)');
+	$req = $linkpdo->prepare('INSERT INTO membre VALUES (NULL, :nom, :prenom, :adresse, :code_postal, :ville, :courriel, :date_de_naissance, :mot_de_passe, NULL, NULL)');
 
 	if ($req == false) {
 	 	die ('Error preparation');
