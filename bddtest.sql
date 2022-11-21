@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `enfant`;
 CREATE TABLE IF NOT EXISTS `enfant` (
-  `Id_Enfant` int(11) NOT NULL AUTO_INCREMENT,
+  `Id_Enfant` INT NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
   `Prénom` varchar(50) NOT NULL,
   `Date_Naissance` date NOT NULL,
@@ -52,8 +52,8 @@ INSERT INTO `enfant` (`Id_Enfant`, `Nom`, `Prénom`, `Date_Naissance`, `Lien_Jet
 
 DROP TABLE IF EXISTS `lier`;
 CREATE TABLE IF NOT EXISTS `lier` (
-  `Id_Objectif` int(11) NOT NULL,
-  `Id_Récompense` int(11) NOT NULL,
+  `Id_Objectif` INT NOT NULL,
+  `Id_Récompense` INT NOT NULL,
   PRIMARY KEY (`Id_Objectif`,`Id_Récompense`),
   KEY `Id_Récompense` (`Id_Récompense`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `lier` (
 
 DROP TABLE IF EXISTS `membre`;
 CREATE TABLE IF NOT EXISTS `membre` (
-  `Id_Membre` int(11) NOT NULL AUTO_INCREMENT,
+  `Id_Membre` INT NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
   `Prénom` varchar(50) NOT NULL,
   `Adresse` varchar(100) DEFAULT NULL,
@@ -75,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `Courriel` varchar(50) DEFAULT NULL,
   `Date_Naissance` date NOT NULL,
   `Mdp` varchar(50) DEFAULT NULL,
-  `Pro` tinyint(1) DEFAULT NULL,
-  `Compte_Validé` tinyint(1) DEFAULT NULL,
+  `Pro` tinyINT(1) DEFAULT NULL,
+  `Compte_Validé` tinyINT(1) DEFAULT NULL,
   PRIMARY KEY (`Id_Membre`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -95,12 +95,12 @@ INSERT INTO `membre` (`Id_Membre`, `Nom`, `Prénom`, `Adresse`, `Code_Postal`, `
 
 DROP TABLE IF EXISTS `message`;
 CREATE TABLE IF NOT EXISTS `message` (
-  `Id_Message` int(11) NOT NULL AUTO_INCREMENT,
+  `Id_Message` INT NOT NULL AUTO_INCREMENT,
   `Sujet` varchar(50) DEFAULT NULL,
   `Corps` text,
   `Date_Heure` datetime DEFAULT NULL,
-  `Id_Objectif` int(11) NOT NULL,
-  `Id_Membre` int(11) NOT NULL,
+  `Id_Objectif` INT NOT NULL,
+  `Id_Membre` INT NOT NULL,
   PRIMARY KEY (`Id_Message`),
   KEY `Id_Objectif` (`Id_Objectif`),
   KEY `Id_Membre` (`Id_Membre`)
@@ -114,15 +114,15 @@ CREATE TABLE IF NOT EXISTS `message` (
 
 DROP TABLE IF EXISTS `objectif`;
 CREATE TABLE IF NOT EXISTS `objectif` (
-  `Id_Objectif` int(11) NOT NULL AUTO_INCREMENT,
-  `Intitule` varchar(50) DEFAULT NULL,
-  `Nb_Jetons` int(11) DEFAULT NULL,
+  `Id_Objectif` INT NOT NULL AUTO_INCREMENT,
+  `INTitule` varchar(50) DEFAULT NULL,
+  `Nb_Jetons` INT DEFAULT NULL,
   `Durée` double DEFAULT NULL,
   `Lien_Image` varchar(50) DEFAULT NULL,
-  `Priorité` int(11) DEFAULT NULL,
-  `Travaillé` tinyint(1) DEFAULT NULL,
-  `Id_Membre` int(11) NOT NULL,
-  `Id_Enfant` int(11) NOT NULL,
+  `Priorité` INT DEFAULT NULL,
+  `Travaillé` tinyINT(1) DEFAULT NULL,
+  `Id_Membre` INT NOT NULL,
+  `Id_Enfant` INT NOT NULL,
   PRIMARY KEY (`Id_Objectif`),
   KEY `Id_Membre` (`Id_Membre`),
   KEY `Id_Enfant` (`Id_Enfant`)
@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `objectif` (
 -- Déchargement des données de la table `objectif`
 --
 
-INSERT INTO `objectif` (`Id_Objectif`, `Intitule`, `Nb_Jetons`, `Durée`, `Lien_Image`, `Priorité`, `Travaillé`, `Id_Membre`, `Id_Enfant`) VALUES
+INSERT INTO `objectif` (`Id_Objectif`, `INTitule`, `Nb_Jetons`, `Durée`, `Lien_Image`, `Priorité`, `Travaillé`, `Id_Membre`, `Id_Enfant`) VALUES
 (1, 'hello world', 15, 1, 'image', 2, NULL, 1, 1);
 
 -- --------------------------------------------------------
@@ -143,9 +143,9 @@ INSERT INTO `objectif` (`Id_Objectif`, `Intitule`, `Nb_Jetons`, `Durée`, `Lien_
 
 DROP TABLE IF EXISTS `placer_jeton`;
 CREATE TABLE IF NOT EXISTS `placer_jeton` (
-  `Id_Objectif` int(11) NOT NULL,
+  `Id_Objectif` INT NOT NULL,
   `Date_Heure` datetime NOT NULL,
-  `Id_Membre` int(11) NOT NULL,
+  `Id_Membre` INT NOT NULL,
   PRIMARY KEY (`Id_Objectif`,`Date_Heure`),
   KEY `Id_Membre` (`Id_Membre`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -158,8 +158,8 @@ CREATE TABLE IF NOT EXISTS `placer_jeton` (
 
 DROP TABLE IF EXISTS `récompense`;
 CREATE TABLE IF NOT EXISTS `récompense` (
-  `Id_Récompense` int(11) NOT NULL AUTO_INCREMENT,
-  `Intitulé` varchar(50) DEFAULT NULL,
+  `Id_Récompense` INT NOT NULL AUTO_INCREMENT,
+  `INTitulé` varchar(50) DEFAULT NULL,
   `Descriptif` text,
   `Lien_Image` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id_Récompense`)
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `récompense` (
 -- Déchargement des données de la table `récompense`
 --
 
-INSERT INTO `récompense` (`Id_Récompense`, `Intitulé`, `Descriptif`, `Lien_Image`) VALUES
+INSERT INTO `récompense` (`Id_Récompense`, `INTitulé`, `Descriptif`, `Lien_Image`) VALUES
 (1, 'jouet', 'lorem ipsum', 'image_jouet');
 
 -- --------------------------------------------------------
@@ -180,8 +180,8 @@ INSERT INTO `récompense` (`Id_Récompense`, `Intitulé`, `Descriptif`, `Lien_Im
 
 DROP TABLE IF EXISTS `suivre`;
 CREATE TABLE IF NOT EXISTS `suivre` (
-  `Id_Enfant` int(11) NOT NULL,
-  `Id_Membre` int(11) NOT NULL,
+  `Id_Enfant` INT NOT NULL,
+  `Id_Membre` INT NOT NULL,
   `Date_Demande_Equipe` date DEFAULT NULL,
   `Rôle` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id_Enfant`,`Id_Membre`),
