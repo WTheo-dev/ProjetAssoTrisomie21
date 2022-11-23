@@ -51,8 +51,7 @@ header {
     transform: translateX(50px);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(logo.png);
+    background-image: url(icon.png);
 }
 
 nav {
