@@ -50,3 +50,8 @@ form button:hover{
   cursor: pointer;
   background-color: #13068a;
 }
+
+form button>a {
+  text-decoration: none;
+  color: #fff;
+}
