@@ -89,3 +89,9 @@ button{
     background-color: #1e06fa;
     outline:none;
     cursor:pointer;
+}
+
+button>a {
+    text-decoration: none;
+    color: #fff;
+  }
