@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Formulaire d'inscription</title>
+		<link rel="stylesheet" href="style2.css">
+	</head>
+	<body>
+		<form action="formulaire.php" method="POST">
+			
+			<img
+			src="t21complet.png"
+			alt="Logo Trisomie 21"
+			height="150px"
+			width="400px" />
+
+
+			<h1>Inscription</h1>
+
+			<div class="Groupe">
+				<input type="nom" required placeholder="Nom*" name="nom" />
+				<input type="prenom" required placeholder="Prenom*" name="prenom" />
+				<input type="email" required placeholder="Email*" name="adresseE" />
+				<input type="password" required placeholder="Mot de passe*" name="mdp" />
+				<input type="date" required placeholder="Date de naissance*" name="ddn" />
+				<input type="adresse" required placeholder="Adresse*" name="adresse" />
+				<input type="Ville" required placeholder="Ville*" name="vil" />
+				<input type="text" required placeholder="Code Postal*" name="cp" />
+			</div>
+
+			<div align="center">
+				<button type="submit"><a href="formulaire_connexion.html">S'inscrire</a></button>
+				<button><a href="formulaire_connexion.html">Annuler</a></button>
+			</div>
+			
+		</form>
+	</body>
+</html>
