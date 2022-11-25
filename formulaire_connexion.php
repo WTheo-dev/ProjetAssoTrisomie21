@@ -18,7 +18,7 @@
 
 	//rowCount()
  	if ($req->rowCount() > 0) {
- 		echo "Bienvenu sur la page d'accueil !";
+		header('Location:http://localhost/ProjetAssoTrisomie21/accueilpostco.html');
  	}
  	else {
  		echo "Je ne vous connais pas, désolé.";

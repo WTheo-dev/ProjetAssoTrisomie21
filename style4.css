@@ -47,11 +47,11 @@ header {
 
 .logo {
     height: 60px;
-    width: 150px;
+    width: 160px;
     transform: translateX(50px);
     background-position: center;
     background-size: cover;
-    background-image: url(icon.png);
+    background-image: url(t21complet.png);
 }
 
 nav {
@@ -59,7 +59,7 @@ nav {
     justify-content: center;
     transform: translateX(-40%);
     align-items: center;
-    border-bottom: 2px solid crimson;
+    border-bottom: 2px solid blue;
 }
 
 nav ul {
@@ -134,15 +134,15 @@ nav ul li a:hover {
 }
 
 .cart_image_1 {
-    background-image: url(img2.jpg);
+    background-image: url(icon.png);
 }
 
 .cart_image_2 {
-    background-image: url(img3.jpg);
+    background-image: url();
 }
 
 .cart_image_3 {
-    background-image: url(img4.jpg);
+    background-image: url();
 }
 
 .cart:hover {
