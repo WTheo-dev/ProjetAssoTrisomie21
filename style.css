@@ -1,0 +1,105 @@
+#tableau {
+  border-collapse: collapse; 
+  width: 100%; 
+  border: 1px solid #ddd; 
+  font-size: 18px; 
+  background-color:#f1f1f1
+}
+
+#tableau th, #tableau td {
+  text-align: left;
+  padding: 12px; 
+}
+
+#tableau tr {
+  border-bottom: 1px solid #ddd;
+} 
+.conteneur {
+    position: relative;
+    /* max-width: 800px; */
+    margin: 0 auto;
+  }
+  
+  .conteneur img {vertical-align: middle;}
+  
+  .conteneur .contenu {
+    position: absolute;
+    /* bottom: 0; */
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 0.3em;
+  }
+  .flexbox
+  {
+    display: flex;
+  }
+
+  /* profil */
+  
+
+
+/* .card
+background white
+position relative
+border-radius 20px
+box-shadow 1px 1px 40px rgba(black, 0.1)
+max-width 300px
+display flex
+flex-direction column
+align-items center
+padding 15px
+box-sizing border-box
+svg
+  width 150px
+  height 150px
+  border-radius 50%
+  border solid 10px transparent
+  background-image linear-gradient(white, white),linear-gradient(90deg, #ff606026 40%, #8860ff26 100%)
+  background-clip padding-box, border-box
+  background-origin padding-box, border-box
+  background-size 100% 100%, 100% 100%
+  background-position center center, center bottom
+  background-repeat no-repeat
+  transition 1s
+  &:hover
+    background-size 100% 100%, 200% 200%
+  path
+    fill #505050
+h2
+  margin 0
+  padding 1rem
+.title
+  padding .7rem 1rem
+  font-size 14px
+  font-weight 600
+  color #9a9a9a
+.desc
+  padding: 1rem 1rem
+  order 2
+  text-align center
+.actions
+  display flex
+  button
+    display flex
+    flex-direction column
+    align-items center
+    background none
+    border none
+    font-size 16px
+    padding .7rem 1rem
+    color #707070
+    font-weight 800
+    i
+      font-size 20px
+      margin-bottom 5px
+      padding 10px
+      border-radius 50%
+      transition .3s
+      &.fa-heart
+        color #ff6060
+        background #ff606026
+      &.fa-star
+        color #8860ff
+        background #8860ff26
+         */
