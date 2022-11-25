@@ -57,7 +57,7 @@ svg
   height :150px;
   border-radius :50%;
   border :solid 10px transparent;
-  background-image: linear-gradient(white, white),linear-gradient(90deg, #ff606026 40%, #8860ff26 100%);
+  background-image: linear-gradient(white, white),linear-gradient(90deg, #ec343426 40%, #1748ea26 100%);
   background-clip :padding-box, border-box;
   background-origin: padding-box, border-box;
   background-size :100% 100%, 100% 100%;
