@@ -1,0 +1,57 @@
+header {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 106, 255, 0.35);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+
+h1:hover {
+    color: rgba(0, 255, 208, 0.7);
+    -webkit-text-stroke: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: blue;
+    transform: translate(5%, 40%);
+    font-family: sans-serif;
+    -webkit-text-stroke: 2px rgb(0, 255, 251);
+    cursor: pointer;
+    transition: all .4s ease;
+    display: inline-block;
+}
+
+p {
+    font-size: 1.5rem;
+    color: 6a00ff;
+    transform: translate(5%, 40%);
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+input {
+    position: relative;
+    justify-content: center;
+    margin-top: 2.1%;
+    align-items: center;
+}
+
+.partition_1_head {
+    position: relative;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.submit {
+    position: relative;
+    padding: 5px;
+    height: 15%;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
