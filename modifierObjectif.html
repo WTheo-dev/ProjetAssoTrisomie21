@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>saisi</title>
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<title>Modification Objectif</title>
 	</head>
 	<body>
-		<form action="calculJetons.php" method="POST">
-			Jetons : <input type="text" name="jetons">
-			<input type="submit" name="deposer" value="deposer">
-			<input type="submit" name="retirer" value="retirer">
+		<header>
+			<div class="partition_1_head">
+				<h1>Jetons : </h1>
+				<form action="calculJetons.php" method="POST" >
+					<p>Gérer mes jetons : <input type="text" name="jetons"></p>
+					<p><input type="submit" name="deposer" value="Déposer" class="submit">
+					<input type="submit" name="retirer" value="Retirer" class="submit"></p>
+				</form>
+		
+				<h1>Modifer objectif : </h1>
+				<form action="modifObjectif.php" method="POST">
+					<p>intitule : <input type="text" name="intitule"><br></p>
+					<p>duree : <input type="text" name="duree"><br></p>
+					<p>lien : <input type="text" name="lien"><br></p>
+					<p>priorite : <input type="text" name="priorite"><br></p>
+					<p>travaille : <input type="text" name="travaille"><br></p>
+					<p><input type="submit" name="wesh" value="Modifer" class="submit"></p>
+				</form>
+			</div>
+		</header>
 
-			Modifer objectif<br>
-			intitule : <input type="text" name="intitule"><br>
-			duree : <input type="text" name="duree"><br>
-			lien : <input type="text" name="lien"><br>
-			priorite : <input type="text" name="priorite"><br>
-			travaille : <input type="text" name="travaille"><br>
-			<input type="submit" name="wesh" value="Modif">
-		</form>
 	</body>
 </html>
