@@ -139,7 +139,7 @@ height: 175px;
     transform: translateX(20px);
     background-position: center;
     background-size: cover;
-   }
+}
 
 .cart:hover {
     transform: translateY(-15px);
