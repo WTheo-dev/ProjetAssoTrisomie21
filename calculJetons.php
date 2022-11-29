@@ -23,7 +23,7 @@
 		 die ('Error execute 1');
 	 }
 
-	echo afficherTable('objectif');
+	echo 'Avant modification du stock de jetons : ' . '<br>' . '<br>' .  afficherTable('objectif');
 
 	if (isset($_POST['deposer'])) {
 		$req = $linkpdo->prepare('UPDATE objectif SET Nb_Jetons = Nb_Jetons + :deposer WHERE intitule = "hello world"');
@@ -67,7 +67,9 @@
 		 die ('Error execute 1');
 	 }
 
-	echo afficherTable('objectif');
+	echo  'Après modification du stock de jetons : ' . '<br>' . '<br>' . afficherTable('objectif');
+
+	echo 'TADAM !';
 	
 	//OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOW
 
