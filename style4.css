@@ -15,13 +15,16 @@ header {
 }
 
 .section_1 {
+    background-color: #37acf7;
     position: relative;
-    background-position: top;
-    background-size: cover;
+    background-position : center;
+    background-size: 80%;
     background-repeat: no-repeat;
-    background-image: url(img1.jpg);
+    background-image: url(background4.jpg);
 }
-
+.section_2{
+    background :linear-gradient(#37acf7 20%, #000a90) ;
+}
 .section_3 {
     position: absolute;
     top: 0;
@@ -104,6 +107,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .carts_container {
@@ -120,7 +124,8 @@ nav ul li a:hover {
     display: grid;
     grid-template-rows: 3fr 1fr;
     padding: 5px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
     border-radius: 10px;
     transition: all .5s ease;
     border: 1px solid lightgray;
@@ -132,15 +137,20 @@ nav ul li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.cart img {
+    position: relative;
+    
+}
 .cart_image_1 {
 height: 175px;
     width: 220px;
     transform: translateX(20px);
     background-position: center;
     background-size: cover;
+    
 }
 
 .cart:hover {
     transform: translateY(-15px);
+    opacity: 1;
 }

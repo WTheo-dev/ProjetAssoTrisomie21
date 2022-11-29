@@ -4,39 +4,6 @@
     box-sizing: border-box;
 }
 
-header {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(233, 233, 233);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr;
-}
-
-.section_1 {
-    position: relative;
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(img1.jpg);
-}
-
-.section_3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.section_3_partion_1 {
-    position: relative;
-}
-
 .partition_1_head {
     position: relative;
     height: auto;
