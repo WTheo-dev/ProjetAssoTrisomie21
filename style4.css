@@ -159,6 +159,7 @@ height: 175px;
     background-size: cover;
     background-image: url(icon.png);
 }
+   }
 
 .cart:hover {
     transform: translateY(-15px);
