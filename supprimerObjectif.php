@@ -18,6 +18,8 @@
         $req2->DebugDumpParams();
         die ('Error execute 1');
     }
+
+    echo "Objectif supprimé !";
 ?>
 
     
