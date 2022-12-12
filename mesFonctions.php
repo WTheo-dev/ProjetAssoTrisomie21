@@ -81,4 +81,60 @@
 
         return $retour;
     }
+
+    function afficherJetons(){
+        $req = NULL; 
+        $req2 = NULL; 
+        $retour = '';
+
+        try {
+            $linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
+        }
+        catch (Exception $e) {
+            die('Error : ' . $e->getMessage());
+        }
+
+        $req = $linkpdo->prepare('SELECT Nb_Jetons FROM Objectif');
+
+        if ($req == false) {
+            die ('Error query');
+        }
+    
+        $req2 = $req->execute(array('maTable' => $laTable));
+    
+        if ($req2 == false) {
+            $req2->DebugDumpParams();
+            die ('Error execute 1');
+        }
+
+        while($data = $req->fetch()) {
+            $retour .= 'Colonne ' . $i . ' : '. $data[$i] . ';<br/>'; 
+        }
+
+        $retour .= '<br/>';
+
+        return $retour;
+    }
+
+    function prepare_and_execute($maReq, $tab){
+        try {
+            $linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
+        }
+        catch (Exception $e) {
+            die('Error : ' . $e->getMessage());
+        }
+
+        $req = $linkpdo->prepare($maReq);
+
+        if ($req == false) {
+            die ('Error preparation');
+        }
+   
+        $req2 = $req->execute($tab);
+   
+        if ($req2 == false) {
+            $req->DebugDumpParams();
+            die ('Error execute');
+        }
+    }
 ?>
