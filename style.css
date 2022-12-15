@@ -152,34 +152,41 @@
     background-image: url(t21complet.png);
   }
   
-  nav {
+  header{
+    position: absolute;
+    width: 94%;
+    margin: 0 auto;
+    padding: 13px 0;
+    top:40px;
+    left:30px;
+    right:30px;
+    border-radius:50px;
+    z-index:2;
+    background: rgb(224, 238, 243);
+}
+
+nav{
     display: flex;
-    justify-content: center;
-    transform: translateX(-40%);
     align-items: center;
-    border-bottom: 2px solid blue;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+nav ul li{
     list-style: none;
-  }
-  
-  nav ul li a {
-    font-size: 1.2rem;
-    font-weight: bolder;
+    display: inline-block;
+    padding: 0px 25px;
+}
+nav ul li a{
+    color: rgb(75, 3, 45);
     text-decoration: none;
-    font-family: sans-serif;
-    color: #333;
-    transition: all .3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #fff;
-  }
+    font-size: 15px;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: rgb(241, 31, 83);
+    transition: .3s;
+}
   
   
   
