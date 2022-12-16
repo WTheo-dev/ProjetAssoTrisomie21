@@ -36,18 +36,7 @@ CREATE TABLE IF NOT EXISTS `chat` (
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `chat`
---
 
-INSERT INTO `chat` (`id`, `message`, `nom`) VALUES
-(9, 'hello le chat fonctionne', 'coucou_theo'),
-(10, 'qqsdfqsdfqs', 'qsdfqsdf'),
-(11, 'qsdfqsdfqds', 'qsdfqsdf'),
-(12, 'qsdfqsdfqsf', 'qsdfqsdfsq'),
-(13, 'qsdfqsdfqsf', 'qsdfqsdfsq'),
-(14, 'qsdfqsdfqsf', 'qsdfqsdfsq'),
-(15, 'qsdfqsdfqsf', 'qsdfqsdfsq'),
-(16, 'qsdfqsdfqsf', 'qsdfqsdfsq');
 
 -- --------------------------------------------------------
 
@@ -112,8 +101,6 @@ CREATE TABLE IF NOT EXISTS `membre` (
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`Id_Membre`, `Nom`, `Prénom`, `Adresse`, `Code_Postal`, `Ville`, `Courriel`, `Date_Naissance`, `Mdp`, `Pro`, `Compte_Validé`) VALUES
-(1, 'Martin', 'alain', '2 rue des grands champs', '77000', 'Orléans', 'alainmartin@gmail.com', '2022-10-11', '$alain', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -160,9 +147,6 @@ CREATE TABLE IF NOT EXISTS `objectif` (
 -- Déchargement des données de la table `objectif`
 --
 
-INSERT INTO `objectif` (`Id_Objectif`, `Intitule`, `Nb_Jetons`, `Durée`, `Lien_Image`, `Priorité`, `Travaillé`, `Id_Membre`, `Id_Enfant`) VALUES
-(1, 'hello world', 15, 1, 'image', 2, NULL, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -197,9 +181,6 @@ CREATE TABLE IF NOT EXISTS `récompense` (
 -- Déchargement des données de la table `récompense`
 --
 
-INSERT INTO `récompense` (`Id_Récompense`, `Intitulé`, `Descriptif`, `Lien_Image`) VALUES
-(1, 'jouet', 'lorem ipsum', 'image_jouet');
-
 -- --------------------------------------------------------
 
 --
@@ -220,9 +201,6 @@ CREATE TABLE IF NOT EXISTS `suivre` (
 -- Déchargement des données de la table `suivre`
 --
 
-INSERT INTO `suivre` (`Id_Enfant`, `Id_Membre`, `Date_Demande_Equipe`, `Rôle`) VALUES
-(1, 1, '2022-10-18', 'coordinateur');
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
