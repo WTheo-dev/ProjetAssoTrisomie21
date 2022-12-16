@@ -36,7 +36,7 @@
 			
 	}*/
 
-	echo 'Avant modification de la table objectif : ' . '<br>' . '<br>' .  afficherTable('objectif');
+	echo '<h1>Avant modification de la table objectif : </h1>' . '<br>' . '<br>' .  afficherTable('objectif');
 
 	switch($_POST) {
 		case isset($_POST["submit_intitule"]):
@@ -68,7 +68,7 @@
 			
 	}
 
-	echo 'Après modification de la table objectif : ' . '<br>' . '<br>' .  afficherTable('objectif');
+	echo '<h1>Après modification de la table objectif : </h1>' . '<br>' . '<br>' .  afficherTable('objectif');
 
  	/*$req = $linkpdo->prepare($maReq);
 
