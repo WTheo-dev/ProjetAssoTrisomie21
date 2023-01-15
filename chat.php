@@ -18,35 +18,58 @@ AND !empty ($_POST['message']))
         <meta charset="utf-8">
     </head>
     <body>
+      <?php
+        $allmsg = $bdd->query('SELECT * FROM chat ORDER BY id DESC');
+        while($msg = $allmsg->fetch())
+        {
+          ?>
+        <div class="affichage">
+        <b><?php echo $msg['nom']; ?> : 
+        </b><?php echo $msg['message']; ?><br/>
+        </div>
+        
+      <?php
+        }
+        ?>
         <form method="post" action="">
             <input type="text" name="nom" placeholder="NOM" /><br />
             <textarea type="text" name="message" placeholder="MESSAGE" cols="30"rows="10"></textarea><br/>
     <button type="submit" value="Envoyer" />Envoyer</button>
         </form>
-        <?php
-        $allmsg = $bdd->query('SELECT * FROM chat ORDER BY id DESC');
-        while($msg = $allmsg->fetch())
-        {
-        ?>
-        <b><?php echo $msg['nom']; ?> : 
-        </b><?php echo $msg['message']; ?><br/>
-        <?php
-        }
-        ?>
     </body>
 </html>
 <style> 
-input,textarea {
-  padding: 12px 30px 10px 20px; */
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
+
+
+input[type="text"],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
   font-size: 16px;
-  /* resize: none; */
+  width: 80%;
+  box-sizing: border-box;
+ }
+
+button[type="submit"] {
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
 }
-button{
-    /* width:100%; */
-    /* height:100%; */
+b {
+  color: blue;
+  font-size: 16px;
 }
+.affichage {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  /* margin-bottom: 10px; */
+}
+
 </style>
