@@ -19,6 +19,34 @@
 	</head>
 	<body>
 
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<form action="supprimerEnfant.php" method="POST">
+
+		<img
+			src="t21complet.png"
+			alt="Logo Trisomie 21"
+			height="150px"
+			width="500px" />
+
 		<nav>
 			<ul>
 			  <li class="deroulant"><a href="#">Récemment consulté &ensp;</a>
@@ -63,25 +91,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-		<form action="supprimerEnfant.php" method="POST">
 			
-			<img
-			src="t21complet.png"
-			alt="Logo Trisomie 21"
-			height="150px"
-			width="500px" />
+			
 
 
 			<h1>Quel enfant voulez-vous supprimer ?</h1>
