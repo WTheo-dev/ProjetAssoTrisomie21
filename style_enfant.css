@@ -4,7 +4,7 @@ body{
   justify-content:center;
   flex-direction: columns;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #d7d7d7;
   font-family: 'Roboto', sans-serif;
 }
 form {
@@ -55,7 +55,7 @@ form button>a {
 
 
 
-nav{
+form nav{
   width: 100%;
   margin: 0 auto;
   margin-bottom: 5em;
@@ -64,24 +64,24 @@ nav{
   top: 0px;
 }
 
-nav ul{
+form nav ul{
   list-style-type: none;
 }
 
-nav ul li{
+form nav ul li{
   float: left;
   width: 25%;
   text-align: center;
   position: relative;
 }
 
-nav ul::after{
+form nav ul::after{
   content: "";
   display: table;
   clear: both;
 }
 
-nav a{
+form nav a{
   display: block;
   text-decoration: none;
   color: black;
@@ -89,7 +89,7 @@ nav a{
   padding: 10px 0px;
 }
 
-nav a:hover{
+form nav a:hover{
   color: orange;
   border-bottom: 2px solid gold;
 }
@@ -102,7 +102,7 @@ nav a:hover{
   width: 100%;
   z-index: 1000;
 }
-nav > ul li:hover .sous{
+form nav > ul li:hover .sous{
   display: block;
 }
 .sous li{
