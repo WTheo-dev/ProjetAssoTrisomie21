@@ -199,18 +199,10 @@ nav ul li a:hover {
   border-radius: 10px;
   transition: all .5s ease;
   border: 1px solid lightgray;
+  text-align: center;
+  float: center;
 }
 
-.cart_image {
-  border-radius: 10px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.cart img {
-  position: relative;
-  
-}
 .cart_image_1 {
 height: 175px;
   width: 220px;
@@ -224,4 +216,8 @@ height: 175px;
   transform: translateY(-15px);
   opacity: 1;
 }
-
+a{
+  text-decoration: none;
+  color: black;
+  font-size:1.5em;
+}
