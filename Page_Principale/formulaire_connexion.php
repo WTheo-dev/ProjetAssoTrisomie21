@@ -1,4 +1,21 @@
 <?php
+
+	// récupération des informations du formulaire	
+	$email = $_POST['courriel'];
+	$password = $_POST['mdp'];
+
+	// cryptage du mot de passe
+	$password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+	// insertion des informations cryptées dans la base de données
+	$insert_query = "INSERT INTO utilisateurs (courriel, mdp) VALUES ('$email', '$password_hash')";
+
+	// exécution de la requête d'insertion
+	// (il est important de noter que cette étape nécessite une connexion à une base de données existante)
+	mysqli_query($conn, $insert_query);
+
+
+
 	try {
 	 	$linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
 	}
