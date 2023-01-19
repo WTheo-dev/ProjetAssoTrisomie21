@@ -73,9 +73,9 @@
   .title
   {
     padding :0.7rem 1rem;
-    font-size :14px;
+    font-size :1em;
     font-weight :2000;
-    color: #9a9a9a;
+    color: #000000;
   }
   .desc
   {
