@@ -112,18 +112,7 @@
 
 
 
-		<header>
-			<div class="partition_1_head">
-				<h1>Ajouter enfant : </h1>
-				<form action="AjoutEnfant.php" method="POST">
-					<p>Nom : <input type="text" name="nom"><br></p>
-                    <p>Prénom : <input type="text" name="prenom"><br></p>
-					<p>date de naissance : <input type="date" name="ddn"><br></p>
-					<p>Lien au jetons : <input type="text" name="lien"><br></p>
-                    <input type="submit" value="Ajouter">
-				</form>
-			</div>
-		</header>
+		
 
 	</body>
 </html>
