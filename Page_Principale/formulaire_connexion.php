@@ -1,18 +1,21 @@
 <?php
 
-	// récupération des informations du formulaire	
-	$email = $_POST['courriel'];
-	$password = $_POST['mdp'];
+	session_start();
 
-	// cryptage du mot de passe
-	$password_hash = password_hash($password, PASSWORD_DEFAULT);
+	if(isset($_POST['courriel']) && isset($_POST['mdp'])) {
+    $email = $_POST['courriel'];
+    $password = $_POST['mdp'];
 
-	// insertion des informations cryptées dans la base de données
-	$insert_query = "INSERT INTO utilisateurs (courriel, mdp) VALUES ('$email', '$password_hash')";
-
-	// exécution de la requête d'insertion
-	// (il est important de noter que cette étape nécessite une connexion à une base de données existante)
-	mysqli_query($conn, $insert_query);
+    // Vérifier les informations de connexion avec une base de données ou un autre mécanisme d'authentification
+    if(/* informations de connexion valides */) {
+        $_SESSION['email'] = $email;
+        header("Location: accueilpostco.html");
+        exit();
+    } else {
+        // Afficher un message d'erreur si les informations de connexion sont incorrectes
+        echo "Email ou mot de passe incorrect";
+    }
+}
 
 
 
