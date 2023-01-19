@@ -111,42 +111,4 @@
 			</form>
 		</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<h1>Modifer enfant : </h1>
-				<form action="modifEnfant.php" method="POST">
-					<p>Nom de l'enfant à modifier : <input type="text" name="nomSet">
-						Prénom de l'enfant à modifier : <input type="text" name="prenomSet">
-					<p>Nouveau nom : <input type="text" name="nom"><br>
-						<input type="submit" value="Modifer nom" name="submit_nom" class="submit"></p>
-					<p>Nouveau prénom : <input type="text" name="prenom"><br>
-						<input type="submit" value="Modifer prénom" name="submit_Prenom" class="submit"></p>
-					<p>Nouvelle date de naissance : <input type="text" name="ddn"><br>
-						<input type="submit" value="Modifer date de naissance" name="submit_ddn" class="submit"></p>
-					<p>Nouveau lien vers les jetons : <input type="text" name="lien"><br>
-						<input type="submit" value="Modifer lien" name="submit_lien" class="submit"></p>
-				</form>
-
-	</body>
 </html>
