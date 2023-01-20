@@ -103,7 +103,7 @@
 		 die ('Error execute 1');
 	 }
 
-	 header("Location: http://localhost/SAE/Code/User%20Story%20D%C3%A9poserRetirer%20Jeton_Points/Modifier_Ajouter_Supprimer%20Objectif/modifierObjectifPage.php");
+	 header("Location: Gestion_Objectif\modifierObjectifPage.php");
  
 	 exit;
 

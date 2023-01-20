@@ -67,7 +67,7 @@
 		  
 						  while($data = $req->fetch()) {
 					  ?>
-					  <li><a href="http://localhost/SAE/Code/User%20Story%20D%C3%A9poserRetirer%20Jeton_Points/Modifier_Ajouter_Supprimer%20Objectif/modifierObjectifPage.php">Id : <?php echo $data[0] . "<br>" . "Intitule : " . $data[1] . "<br>" . "Jetons : ". $data[2];?></a></li>
+					  <li><a href="Gestion_Objectif\modifierObjectifPage.php">Id : <?php echo $data[0] . "<br>" . "Intitule : " . $data[1] . "<br>" . "Jetons : ". $data[2];?></a></li>
 					  <?php
 					  		$_SESSION['Nom'] = $data[0];
 							$_SESSION['Prenom'] = $data[1];
@@ -76,14 +76,14 @@
 				</ul>
 			  </li>
 			  <li class="deroulant"><a href="#">Liste Gestion &ensp;</a>
-				<ul class="sous">
-				<li><a href="http://localhost/SAE/Code/Mioche/Modifier_Ajouter_Supprimer%20Enfant/AjoutEnfantPage.php">Gestion enfants</a></li>
-		  <li><a href="http://localhost/SAE/Code/User%20Story%20D%c3%a9poserRetirer%20Jeton_Points/Modifier_Ajouter_Supprimer%20Objectif/modifierObjectifPage.php">Gestion Jetons/Objectifs</a></li>
+		<ul class="sous">
+		<li><a href="Gestion_Enfant\Modifier_Ajouter_Supprimer Enfant\AjoutEnfantPage.php">Gestion enfants</a></li>
+		  <li><a href="Gestion_Objectif\modifierObjectifPage.php">Gestion Jetons/Objectifs</a></li>
 		  <li><a href="#">À VENIR !</a></li>
-				</ul>
-			  </li>
-			  <li><a href="http://localhost/SAE/Code/User%20Story%20D%c3%a9poserRetirer%20Jeton_Points/Modifier_Ajouter_Supprimer%20Objectif/AjoutObjectifPage.php">Ajouter</a></li>
-			  <li><a href="http://localhost/SAE/Code/User%20Story%20D%c3%a9poserRetirer%20Jeton_Points/Modifier_Ajouter_Supprimer%20Objectif/supprimerObjectifPage.php">Supprimer</a></li>
+		</ul>
+	  </li>
+	  <li><a href="Gestion_Objectif\AjoutObjectifPage.php">Ajouter</a></li>
+		<li><a href="Gestion_Objectif\supprimerObjectifPage.php">Supprimer</a></li>
 			</ul>
 		  </nav>
 
