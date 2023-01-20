@@ -6,18 +6,22 @@
     $email = $_POST['courriel'];
     $password = $_POST['mdp'];
 
-    // Vérifier les informations de connexion avec une base de données ou un autre mécanisme d'authentification
-    if(/* informations de connexion valides */) {
-        $_SESSION['email'] = $email;
-        header("Location: accueilpostco.html");
-        exit();
-    } else {
-        // Afficher un message d'erreur si les informations de connexion sont incorrectes
-        echo "Email ou mot de passe incorrect";
-    }
+	// récupération du mot de passe crypté de la base de données
+	$password_hash_query = "SELECT mdp FROM utilisateurs WHERE courriel = '$email'";
+	$result = mysqli_query($conn, $password_hash_query);
+	$password_hash_from_db = mysqli_fetch_assoc($result)['mdp'];
+
+	// vérification du mot de passe
+	if (password_verify($password, $password_hash_from_db)) {
+    	// mot de passe correct, connectez l'utilisateur
+    	// redirection vers la page d'accueil
+    header('Location: accueilpostco.html');
+	} else {
+    // mot de passe incorrect, affichez un message d'erreur
+    echo "Email ou mot de passe incorrect";
+	}
+
 }
-
-
 
 	try {
 	 	$linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
