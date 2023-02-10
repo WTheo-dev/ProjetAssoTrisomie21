@@ -1,4 +1,17 @@
+<?php
+session_start();
 
+try {
+    $linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root');
+} catch (Exception $e) {
+    die('Error : ' . $e->getMessage());
+}
+
+// Vérification de la connexion de l'utilisateur
+if (!isset($_SESSION['logged_in'])) {
+    header('Location:authentification.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 

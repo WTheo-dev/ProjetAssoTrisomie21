@@ -1,4 +1,28 @@
 <?php
+
+	session_start();
+
+	if(isset($_POST['courriel']) && isset($_POST['mdp'])) {
+    $email = $_POST['courriel'];
+    $password = $_POST['mdp'];
+
+	// récupération du mot de passe crypté de la base de données
+	$password_hash_query = "SELECT mdp FROM utilisateurs WHERE courriel = '$email'";
+	$result = mysqli_query($conn, $password_hash_query);
+	$password_hash_from_db = mysqli_fetch_assoc($result)['mdp'];
+
+	// vérification du mot de passe
+	if (password_verify($password, $password_hash_from_db)) {
+    	// mot de passe correct, connectez l'utilisateur
+    	// redirection vers la page d'accueil
+    header('Location: accueilpostco.html');
+	} else {
+    // mot de passe incorrect, affichez un message d'erreur
+    echo "Email ou mot de passe incorrect";
+	}
+
+}
+
 	try {
 	 	$linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
 	}
@@ -6,31 +30,7 @@
 	 	die('Error : ' . $e->getMessage());
 	}
 
-	//Il faudra sûrement changer l'ordre de la requête en fonction des colonnes que vous avez fait dans la BDD.
-	$req = $linkpdo->prepare('SELECT * FROM membre WHERE Courriel = :email AND mdp = :mdp;');
-
-	if ($req == false) {
-	 	die ('Error query');
-	}
-
-	$req2 = $req->execute(array('email' => $_POST["courriel"],
-					'mdp' => $_POST["mdp"]));
-
-	//rowCount()
- 	if ($req->rowCount() > 0) {
-		header('Location:http://localhost/ProjetAssoTrisomie21/accueilpostco.html');
- 	}
- 	else {
- 		echo "Je ne vous connais pas, désolé.";
- 	}
-
-	if ($req2 == false) {
-	 	die ('Error execute');
-	 	$req->DebugDumpParams();
-	}
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
