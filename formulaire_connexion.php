@@ -1,36 +1,35 @@
 <?php
-
 	session_start();
 
-	if(isset($_POST['courriel']) && isset($_POST['mdp'])) {
-    $email = $_POST['courriel'];
-    $password = $_POST['mdp'];
+	if (isset($_POST['courriel']) && isset($_POST['mdp'])) {
+		$email = $_POST['courriel'];
+		$password = $_POST['mdp'];
 
-	// récupération du mot de passe crypté de la base de données
-	$password_hash_query = "SELECT mdp FROM utilisateurs WHERE courriel = '$email'";
-	$result = mysqli_query($conn, $password_hash_query);
-	$password_hash_from_db = mysqli_fetch_assoc($result)['mdp'];
+		try {
+			$linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
+			$linkpdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	// vérification du mot de passe
-	if (password_verify($password, $password_hash_from_db)) {
-    	// mot de passe correct, connectez l'utilisateur
-    	// redirection vers la page d'accueil
-    header('Location: accueilpostco.html');
-	} else {
-    // mot de passe incorrect, affichez un message d'erreur
-    echo "Email ou mot de passe incorrect";
+			// use prepared statements to prevent SQL injection
+			$stmt = $linkpdo->prepare("SELECT mdp FROM membre WHERE courriel = :email");
+			$stmt->bindParam(':email', $email);
+			$stmt->execute();
+			$password_hash_from_db = $stmt->fetchColumn();
+
+			if (password_verify($password, $password_hash_from_db)) {
+				// password is correct, log in the user
+				// redirect to the home page
+				header('Location: accueilpostco.html');
+				exit;
+			} else {
+				// password is incorrect, display an error message
+				echo "Email ou mot de passe incorrect";
+			}
+		} catch (PDOException $e) {
+			echo "Error: " . $e->getMessage();
+		}
 	}
-
-}
-
-	try {
-	 	$linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
-	}
-	catch (Exception $e) {
-	 	die('Error : ' . $e->getMessage());
-	}
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,27 +40,18 @@
 </head>
 <body>
 	<form action="formulaire_connexion.php" method="POST">
-			
-			<img
-			src="t21complet.png"
-			alt="Logo Trisomie 21"
-			height="150px"
-			width="400px" />
-
-			<h1>Se connecter</h1>
-
-			<div class="inputs">
-			 	<input type="email" required placeholder="Email" name="courriel" />
-				<input type="password" required placeholder="Mot de passe" name="mdp">
-			</div>
-			
-				
-			<div align="center">
-			<p class="inscription"><a href="motdepasseoublie.html">Mot de passe oublié</a></p>	
-			</div>
-			<div align="center">
-			  <button type="submit"><a href="accueilpostco.html">Se connecter</a></button>
-			</div>
+		<img src="t21complet.png" alt="Logo Trisomie 21" height="150px" width="400px" />
+		<h1>Se connecter</h1>
+		<div class="inputs">
+			<input type="email" required placeholder="Email" name="courriel" />
+			<input type="password" required placeholder="Mot de passe" name="mdp">
+		</div>
+		<div align="center">
+			<p class="inscription"><a href="motdepasseoublie.html">Mot de passe oublié</a></p>
+		</div>
+		<div align="center">
+			<button type="submit">Se connecter</button>
+		</div>
 	</form>
 </body>
 </html>

@@ -17,8 +17,8 @@
 	$req2 = $req->execute(array('adresse' => $_POST["adresse"],
 								'mdp' => $_POST["mdp"]));
 	if ($req2 == false) {
-		die ('Error execute');
 		$req->DebugDumpParams();
+		die ('Error execute');
 	}
 
 	// SI IL TROUVE DES COMPTE AVEC MEME MOT DE PASSE OU LOGIN :
@@ -39,9 +39,10 @@
 						'mot_de_passe' => $_POST["mdp"]));
 
 	if ($req2 == false) {
-	 	$req->DebugDumpParams();
+		$req->DebugDumpParams();
 	 	die ('Error execute 2');
 	}
-	header('Location:http://localhost:800/sae/ProjetAssoTrisomie21/formulaire_connexion.html');
+	header('Location:formulaire_connexion.php');
+
 
 ?>
