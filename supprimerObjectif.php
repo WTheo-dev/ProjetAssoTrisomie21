@@ -18,6 +18,10 @@
         $req2->DebugDumpParams();
         die ('Error execute 1');
     }
+
+    header("Location: supprimerObjectifPage.php");
+ 
+    exit;
 ?>
 
     
