@@ -1,5 +1,5 @@
 <?php
-	include 'C:\wamp64\www\SAE\Code\mesFonctions.php';
+	include 'mesFonctions.php';
 
 	$wesh = array('idObj' => $_POST['idObj']);
 	$maReq = '';

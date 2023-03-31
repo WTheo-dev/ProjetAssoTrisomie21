@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	include 'C:\wamp64\www\SAE\Code\mesFonctions.php';
+	include 'mesFonctions.php';
 
 	try {
 		$linkpdo = new PDO("mysql:host=localhost;dbname=sae", 'root', '');
